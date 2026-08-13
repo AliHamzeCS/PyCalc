@@ -1,30 +1,36 @@
-# PyCalc
+# PyCalc - Advanced Math Toolkit
 
-PyCalc is a simple Python command-line calculator project designed to practice Python fundamentals, modular programming, error handling, and Git/GitHub workflow.
+PyCalc is a Python-based mathematical toolkit designed to provide multiple mathematical operations through a simple command-line interface.
 
-## Version
+## Current Version
 
-**v1.0.0**
+**v1.1.0**
 
 ## Features
 
+### Calculator
 - Addition
 - Subtraction
 - Multiplication
 - Division
 - Power
 - Modulus
-- Error handling with `try/except`
-- Separate calculator module
-- Simple command-line interface
-- Navigation between menus
+
+### Quadratic Equations
+- One Quadratic Equation
+- System of Two Equations
+- System of Three Equations
+- Discriminant & Root Analysis
+- Input validation using `try/except`
+
+### History
+- Coming soon
 
 ## Project Structure
 
 ```text
 PyCalc/
-│
 ├── main.py
 ├── Calculator.py
-├── README.md
-└── .gitignore
+├── QuadraticEquations.py
+└── README.md
