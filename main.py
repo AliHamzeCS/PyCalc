@@ -4,7 +4,8 @@ init()
 import os
 import time
 import Calculator
-import QuadraticEquations  # <== ملاحظة 1: لازم تستوردو
+import QuadraticEquations  
+import History
 
 def sleep(seconds):
     time.sleep(seconds)
@@ -26,7 +27,7 @@ while True:
     print(f"{Fore.RED}1{Style.RESET_ALL}. Calculator")
     print(f"{Fore.RED}2{Style.RESET_ALL}. Quadratic Equations")
     print(f"{Fore.RED}3{Style.RESET_ALL}. History")
-    print(f"{Fore.RED}4{Style.RESET_ALL}. Exit", end='\n\n')  # <== ملاحظة 2: كان 3 مكرر
+    print(f"{Fore.RED}4{Style.RESET_ALL}. Exit", end='\n\n')  
 
     try:
         choice = int(input('Choose : '))
@@ -53,7 +54,7 @@ while True:
             print(f"{Fore.RED}7{Style.RESET_ALL}. Back", end='\n\n')
 
             try:
-                calc_choice = int(input('Choose : '))  # <== ملاحظة 3: غيرت الاسم
+                calc_choice = int(input('Choose : '))  
             except ValueError:
                 print('\nError: Please enter a number.')
                 sleep(1)
@@ -115,7 +116,7 @@ while True:
             print(f"{Fore.RED}5{Style.RESET_ALL}. Back" , end='\n\n')
             
             try:
-                qe_choice = int(input('Choose : '))  # <== ملاحظة 3: غيرت الاسم
+                qe_choice = int(input('Choose : '))  
 
             except ValueError:
                 print('\nError: Please enter a number.')
@@ -143,11 +144,11 @@ while True:
                 QuadraticEquations.solve_system_three_equations()
                 input('\nPress Enter to continue...')
                 
-            elif qe_choice == 4:  # <== كان if واسم غلط
+            elif qe_choice == 4:  
                 clear_screen()
                 sleep(1)
                 print(f"{Fore.CYAN}-Discriminant & Root Analysis-{Style.RESET_ALL}", end='\n\n')
-                QuadraticEquations.discriminant_analysis() # لازم تضيف هالفنكشن
+                QuadraticEquations.discriminant_analysis() 
                 input('\nPress Enter to continue...')
             
             elif qe_choice == 5:
@@ -156,10 +157,49 @@ while True:
                 break
 
     elif choice == 3:
-        clear_screen()
-        sleep(1)
-        print("History coming soon...") # <== فاضي
-        input('\nPress Enter to continue...')
+        while True:
+            clear_screen()
+            sleep(1)
+            
+            history = ' History '
+            print(history.center(40, '=').upper(), end='\n\n')
+            
+            print(f"{Fore.RED}1{Style.RESET_ALL}. Show History ")
+            print(f"{Fore.RED}2{Style.RESET_ALL}. Clear History")
+            print(f"{Fore.RED}3{Style.RESET_ALL}. Back", end='\n\n')
+            
+            try:
+                hi_choice = int(input('Choose : '))  
+            
+            except ValueError:
+                print('\nError: Please enter a number.')
+                sleep(1)
+                continue
+            
+            if hi_choice == 1:
+                clear_screen()
+                sleep(1)
+                print(f"{Fore.CYAN}-Show History-{Style.RESET_ALL}", end='\n\n')
+                History.view_history()
+                input('\nPress Enter to continue...')
+                            
+            elif hi_choice == 2:
+                clear_screen()
+                sleep(1)
+                print(f"{Fore.CYAN}-Clear History-{Style.RESET_ALL}", end='\n\n')
+
+                history = History.load_history()
+                History.clear_history(history)
+
+                print("History cleared successfully.")
+
+                input('\nPress Enter to continue...')
+                        
+            elif hi_choice == 3:
+                clear_screen()
+                sleep(1)
+                print('Exit ....')
+                break
 
     elif choice == 4:
         clear_screen()
@@ -168,6 +208,6 @@ while True:
         break
 
     else:
-        print('\nError: Please choose 1, 2, 3, or 4.') # <== صلحت الرسالة
+        print('\nError: Please choose 1, 2, 3, or 4.')
         sleep(1)
         clear_screen()

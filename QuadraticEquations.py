@@ -1,6 +1,8 @@
 from colorama import Fore, Style, init
 init()
+
 import math
+import History
 
 
 # Get a valid number from the user
@@ -39,10 +41,20 @@ def solve_quadratic_equation():
 
         print(f"Two real roots: x1 = {x1}, x2 = {x2}")
 
+        History.add_history(
+            f"{a}x² + {b}x + {c} = 0",
+            f"x1 = {x1}, x2 = {x2}"
+        )
+
     elif D == 0:
         x1 = -b / (2 * a)
 
         print(f"One real root: x1 = {x1}")
+
+        History.add_history(
+            f"{a}x² + {b}x + {c} = 0",
+            f"x1 = {x1}"
+        )
 
     else:
         real_part = -b / (2 * a)
@@ -50,6 +62,12 @@ def solve_quadratic_equation():
 
         print(
             f"Two complex roots: "
+            f"{real_part} + {imag_part}i , "
+            f"{real_part} - {imag_part}i"
+        )
+
+        History.add_history(
+            f"{a}x² + {b}x + {c} = 0",
             f"{real_part} + {imag_part}i , "
             f"{real_part} - {imag_part}i"
         )
@@ -82,11 +100,30 @@ def solve_system_two_equations():
 
         print(f"Unique solution: x = {x}, y = {y}")
 
+        History.add_history(
+            f"{a1}x + {b1}y = {c1} | "
+            f"{a2}x + {b2}y = {c2}",
+            f"x = {x}, y = {y}"
+        )
+
     else:
         if Dx == 0 and Dy == 0:
             print("Infinite solutions")
+
+            History.add_history(
+                f"{a1}x + {b1}y = {c1} | "
+                f"{a2}x + {b2}y = {c2}",
+                "Infinite solutions"
+            )
+
         else:
             print("No solution")
+
+            History.add_history(
+                f"{a1}x + {b1}y = {c1} | "
+                f"{a2}x + {b2}y = {c2}",
+                "No solution"
+            )
 
 
 # System Of Three Equations
@@ -146,11 +183,33 @@ def solve_system_three_equations():
 
         print(f"Unique solution: x = {x}, y = {y}, z = {z}")
 
+        History.add_history(
+            f"{a1}x + {b1}y + {c1}z = {d1} | "
+            f"{a2}x + {b2}y + {c2}z = {d2} | "
+            f"{a3}x + {b3}y + {c3}z = {d3}",
+            f"x = {x}, y = {y}, z = {z}"
+        )
+
     else:
         if Dx == 0 and Dy == 0 and Dz == 0:
             print("Infinite solutions")
+
+            History.add_history(
+                f"{a1}x + {b1}y + {c1}z = {d1} | "
+                f"{a2}x + {b2}y + {c2}z = {d2} | "
+                f"{a3}x + {b3}y + {c3}z = {d3}",
+                "Infinite solutions"
+            )
+
         else:
             print("No solution")
+
+            History.add_history(
+                f"{a1}x + {b1}y + {c1}z = {d1} | "
+                f"{a2}x + {b2}y + {c2}z = {d2} | "
+                f"{a3}x + {b3}y + {c3}z = {d3}",
+                "No solution"
+            )
 
 
 # Discriminant & Root Analysis
@@ -176,8 +235,23 @@ def discriminant_analysis():
     if D > 0:
         print("The equation has two distinct real roots.")
 
+        History.add_history(
+            f"{a}x² + {b}x + {c} = 0",
+            "Two distinct real roots"
+        )
+
     elif D == 0:
         print("The equation has one repeated real root.")
 
+        History.add_history(
+            f"{a}x² + {b}x + {c} = 0",
+            "One repeated real root"
+        )
+
     else:
         print("The equation has two complex roots.")
+
+        History.add_history(
+            f"{a}x² + {b}x + {c} = 0",
+            "Two complex roots"
+        )
