@@ -6,6 +6,7 @@ import time
 import Calculator
 import QuadraticEquations  
 import History
+import Geometry
 
 def sleep(seconds):
     time.sleep(seconds)
@@ -26,8 +27,9 @@ while True:
 
     print(f"{Fore.RED}1{Style.RESET_ALL}. Calculator")
     print(f"{Fore.RED}2{Style.RESET_ALL}. Quadratic Equations")
-    print(f"{Fore.RED}3{Style.RESET_ALL}. History")
-    print(f"{Fore.RED}4{Style.RESET_ALL}. Exit", end='\n\n')  
+    print(f"{Fore.RED}3{Style.RESET_ALL}. Geometry")
+    print(f"{Fore.RED}4{Style.RESET_ALL}. History")
+    print(f"{Fore.RED}5{Style.RESET_ALL}. Exit", end='\n\n')  
 
     try:
         choice = int(input('Choose : '))
@@ -155,8 +157,85 @@ while True:
                 clear_screen()
                 sleep(1)
                 break
-
     elif choice == 3:
+        while True:
+            clear_screen()
+            sleep(1)
+            geo = ' Geometry '
+            print(geo.center(40, '=').upper(), end='\n\n')
+        
+            print(f"{Fore.RED}1{Style.RESET_ALL}. Circle")
+            print(f"{Fore.RED}2{Style.RESET_ALL}. Rectangle")
+            print(f"{Fore.RED}3{Style.RESET_ALL}. Square")
+            print(f"{Fore.RED}4{Style.RESET_ALL}. Triangle")
+            print(f"{Fore.RED}5{Style.RESET_ALL}. Cube")
+            print(f"{Fore.RED}6{Style.RESET_ALL}. Sphere")
+            print(f"{Fore.RED}7{Style.RESET_ALL}. Cylinder")
+            print(f"{Fore.RED}8{Style.RESET_ALL}. Back", end='\n\n')
+            
+            try:
+                ge_choice = int(input('Choose : '))  
+            
+            except ValueError:
+                print('\nError: Please enter a number.')
+                sleep(1)
+                continue
+            
+            if ge_choice == 1:
+                clear_screen()
+                sleep(1)
+                print(f"{Fore.CYAN}-Circle-{Style.RESET_ALL}", end='\n\n')
+                Geometry.circle() 
+                input('\nPress Enter to continue...')
+                
+            elif ge_choice == 2:
+                clear_screen()
+                sleep(1)
+                print(f"{Fore.CYAN}-Rectangle-{Style.RESET_ALL}", end='\n\n')
+                Geometry.rectangle() 
+                input('\nPress Enter to continue...')
+                
+            elif ge_choice == 3:
+                clear_screen()
+                sleep(1)
+                print(f"{Fore.CYAN}-Square-{Style.RESET_ALL}", end='\n\n')
+                Geometry.square() 
+                input('\nPress Enter to continue...')
+                
+            elif ge_choice == 4:
+                clear_screen()
+                sleep(1)
+                print(f"{Fore.CYAN}-Triangle-{Style.RESET_ALL}", end='\n\n')
+                Geometry.triangle() 
+                input('\nPress Enter to continue...')
+                
+            elif ge_choice == 5:
+                clear_screen()
+                sleep(1)
+                print(f"{Fore.CYAN}-Cube-{Style.RESET_ALL}", end='\n\n')
+                Geometry.cube() 
+                input('\nPress Enter to continue...')
+                
+            elif ge_choice == 6:
+                clear_screen()
+                sleep(1)
+                print(f"{Fore.CYAN}-Sphere-{Style.RESET_ALL}", end='\n\n')
+                Geometry.sphere() 
+                input('\nPress Enter to continue...')
+                
+            elif ge_choice == 7:
+                clear_screen()
+                sleep(1)
+                print(f"{Fore.CYAN}-Cylinder-{Style.RESET_ALL}", end='\n\n')
+                Geometry.cylinder() 
+                input('\nPress Enter to continue...')
+                
+            elif ge_choice == 8:
+                clear_screen()
+                sleep(1)
+                break
+                
+    elif choice == 4:
         while True:
             clear_screen()
             sleep(1)
@@ -198,16 +277,15 @@ while True:
             elif hi_choice == 3:
                 clear_screen()
                 sleep(1)
-                print('Exit ....')
                 break
 
-    elif choice == 4:
+    elif choice == 5:
         clear_screen()
         print('Exit ...')
         sleep(1)
         break
 
     else:
-        print('\nError: Please choose 1, 2, 3, or 4.')
+        print('\nError: Please choose 1, 2, 3, 4, or 5.')
         sleep(1)
         clear_screen()
