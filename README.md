@@ -1,116 +1,143 @@
-# PyCalc
+PyCalc v1.4.0
 
-## Advanced Math Toolkit
+Advanced Math Toolkit
 
-PyCalc is a Python-based mathematical toolkit designed to perform different types of calculations through a simple and organized command-line interface.
+PyCalc is a modular Python-based math toolkit designed to provide
+several mathematical utilities through a simple command-line interface.
 
-## Version
+Version
 
-**v1.3.0**
+v1.4.0
 
-## Features
+Features
 
-### 1. Basic Calculator
+1. Calculator
 
-* Addition
-* Subtraction
-* Multiplication
-* Division
-* Power
-* Modulus
+Addition
 
-### 2. Quadratic Equations
+Subtraction
 
-* One Quadratic Equation
-* System of Two Equations
-* System of Three Equations
-* Discriminant & Root Analysis
+Multiplication
 
-### 3. Geometry
+Division
 
-* Circle
+Power
 
-  * Area
-  * Circumference
-  * Diameter
-* Rectangle
+Modulus
 
-  * Area
-  * Perimeter
-  * Diagonal
-* Square
+2. Quadratic Equations
 
-  * Area
-  * Perimeter
-  * Diagonal
-* Triangle
+One Quadratic Equation
 
-  * Area
-  * Perimeter
-* Cube
+System of Two Equations
 
-  * Volume
-  * Total Surface Area
-  * Diagonal
-* Sphere
+System of Three Equations
 
-  * Volume
-  * Surface Area
-  * Diameter
-* Cylinder
+Discriminant & Root Analysis
 
-  * Volume
-  * Total Surface Area
-  * Lateral Surface Area
+3. Geometry
 
-### 4. Calculation History
+Circle
 
-* View calculation history
-* Clear calculation history
-* Save calculations using the History module
+Rectangle
 
-## Project Structure
+Square
 
-```text
+Triangle
+
+Cube
+
+Sphere
+
+Cylinder
+
+4. Scientific Calculator
+
+Square Root
+
+Cube Root
+
+Logarithm
+
+Factorial
+
+Sin
+
+Cos
+
+Tan
+
+Arcsin
+
+Arccos
+
+Arctan
+
+5. History
+
+View calculation history
+
+Clear calculation history
+
+History is stored in history.json
+
+6. Exit
+
+Close PyCalc safely from the main menu.
+
+Project Structure
+
 PyCalc/
-│
 ├── main.py
 ├── Calculator.py
 ├── QuadraticEquations.py
 ├── Geometry.py
+├── ScientificCalculator.py
 ├── History.py
 ├── history.json
 └── README.md
-```
 
-## Technologies
+Technologies
 
-* Python
-* Colorama
-* Math
-* JSON
-* Git & GitHub
+Python
 
-## Version History
+JSON
 
-### v1.3.0
+Colorama
 
-Added the Geometry module with calculations for circles, rectangles, squares, triangles, cubes, spheres, and cylinders.
+Python math module
 
-### v1.2.0
+Installation
 
-Added Calculation History and persistent history storage.
+Clone the repository:
 
-## How to Run
+git clone <YOUR-REPOSITORY-URL>
+cd PyCalc
 
-Clone the repository and run:
+Install the required dependency:
 
-```bash
+pip install colorama
+
+Run
+
+Start PyCalc with:
+
 python3 main.py
-```
 
-## Author
+Version 1.4.0
 
-**Ali Hamze**
+This release includes the Scientific Calculator module and integrates it
+into the main PyCalc menu.
 
-GitHub: `AliHamzeCS`
+The project is structured into separate Python modules so that each
+feature can be developed and maintained independently.
+
+Author
+
+Ali Hamze
+
+GitHub: AliHamze
+
+License
+
+This project is for learning and development purposes.
