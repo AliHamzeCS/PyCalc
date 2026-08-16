@@ -1,13 +1,12 @@
-PyCalc v1.4.0
+PyCalc v1.5.0
 
 Advanced Math Toolkit
 
-PyCalc is a modular Python-based math toolkit designed to provide
-several mathematical utilities through a simple command-line interface.
+PyCalc is a modular Python command-line math toolkit that provides mathematical operations and utilities through a simple menu-based interface.
 
 Version
 
-v1.4.0
+v1.5.0
 
 Features
 
@@ -73,17 +72,62 @@ Arccos
 
 Arctan
 
+<<<<<<< HEAD
 5. History
+=======
+5. Unit Converter
+
+Length: Meter, Kilometer, Centimeter, Millimeter, Mile, Yard, Foot, Inch
+
+Weight: Kilogram, Gram, Milligram, Pound, Ounce
+
+Temperature: Celsius, Fahrenheit, Kelvin
+
+Time: Second, Minute, Hour, Day
+
+6. Calculation History
+>>>>>>> 06f431c (feat: add unit converter v1.5.0)
 
 View calculation history
 
 Clear calculation history
 
+<<<<<<< HEAD
 History is stored in history.json
 
 6. Exit
 
 Close PyCalc safely from the main menu.
+=======
+Store results in history.json
+
+Technologies
+
+Python
+
+Colorama
+
+Pint
+
+JSON
+
+Python math module
+
+Installation
+
+Clone the repository:
+
+git clone <YOUR-REPOSITORY-URL>
+cd PyCalc
+
+Install the required packages:
+
+python -m pip install colorama pint
+
+Run
+
+python main.py
+>>>>>>> 06f431c (feat: add unit converter v1.5.0)
 
 Project Structure
 
@@ -93,6 +137,7 @@ PyCalc/
 ├── QuadraticEquations.py
 ├── Geometry.py
 ├── ScientificCalculator.py
+<<<<<<< HEAD
 ├── History.py
 ├── history.json
 └── README.md
@@ -140,4 +185,26 @@ GitHub: AliHamze
 
 License
 
+=======
+├── UnitConverter.py
+├── History.py
+├── history.json
+├── README.md
+└── .gitignore
+
+Version 1.5.0
+
+This release adds the Unit Converter to PyCalc.
+
+The Unit Converter supports length, weight, temperature, and time conversions using the Pint library. Conversion results are also integrated with the existing calculation history system.
+
+Author
+
+Ali Hamze
+
+GitHub: AliHamzeCS
+
+License
+
+>>>>>>> 06f431c (feat: add unit converter v1.5.0)
 This project is for learning and development purposes.

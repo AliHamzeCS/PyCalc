@@ -8,6 +8,7 @@ import QuadraticEquations
 import History
 import Geometry
 import ScientificCalculator
+import UnitConverter
 
 def sleep(seconds):
     time.sleep(seconds)
@@ -30,8 +31,9 @@ while True:
     print(f"{Fore.RED}2{Style.RESET_ALL}. Quadratic Equations")
     print(f"{Fore.RED}3{Style.RESET_ALL}. Geometry")
     print(f"{Fore.RED}4{Style.RESET_ALL}. Scientific Calculator")
-    print(f"{Fore.RED}5{Style.RESET_ALL}. History")
-    print(f"{Fore.RED}6{Style.RESET_ALL}. Exit", end='\n\n')  
+    print(f"{Fore.RED}5{Style.RESET_ALL}. Unit Converter")
+    print(f"{Fore.RED}6{Style.RESET_ALL}. History")
+    print(f"{Fore.RED}7{Style.RESET_ALL}. Exit", end='\n\n')  
 
     try:
         choice = int(input('Choose : '))
@@ -340,8 +342,275 @@ while True:
                 clear_screen()
                 sleep(1)
                 break
-
+            
     elif choice == 5:
+        while True:
+            clear_screen()
+            sleep(1)
+        
+            Unit_Converter = ' Unit Converter '
+            print(Unit_Converter.center(40, '=').upper(), end='\n\n')
+            
+            print(f"{Fore.RED}1{Style.RESET_ALL}. Length")
+            print(f"{Fore.RED}2{Style.RESET_ALL}. Weigth")
+            print(f"{Fore.RED}3{Style.RESET_ALL}. Temperature")
+            print(f"{Fore.RED}4{Style.RESET_ALL}. Time")
+            print(f"{Fore.RED}5{Style.RESET_ALL}. Back")
+            
+            try:
+                uc_choice = int(input('Choose : '))  
+            
+            except ValueError:
+                print('\nError: Please enter a number.')
+                sleep(1)
+                continue
+            
+            if uc_choice == 1:
+                while True:
+                    clear_screen()
+                    sleep(1)
+                        
+                    length = ' Length '
+                    print(length.center(40, '=').upper(), end='\n\n')
+                            
+                    print(f"{Fore.RED}1{Style.RESET_ALL}. Meter")
+                    print(f"{Fore.RED}2{Style.RESET_ALL}. Kilometer")
+                    print(f"{Fore.RED}3{Style.RESET_ALL}. Centimeter")
+                    print(f"{Fore.RED}4{Style.RESET_ALL}. Millimeter")
+                    print(f"{Fore.RED}5{Style.RESET_ALL}. Mile")
+                    print(f"{Fore.RED}6{Style.RESET_ALL}. Yard")
+                    print(f"{Fore.RED}7{Style.RESET_ALL}. Foot")
+                    print(f"{Fore.RED}8{Style.RESET_ALL}. Inch")
+                    print(f"{Fore.RED}9{Style.RESET_ALL}. Back" , end='\n\n')
+
+                    
+                    try:
+                        len_choice = int(input('Choose : '))  
+                                
+                    except ValueError:
+                        print('\nError: Please enter a number.')
+                        sleep(1)
+                        continue
+                    
+                    
+                    if len_choice == 1:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Meter-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.meters_func()            
+                        input('\nPress Enter to continue...')
+                        
+                    elif len_choice == 2:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Kilometer-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.kilometers_func()            
+                        input('\nPress Enter to continue...')
+                    elif len_choice == 3:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Centimeter-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.centimeters_func()            
+                        input('\nPress Enter to continue...')
+                    elif len_choice == 4:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Millimeter-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.millimeters_func()            
+                        input('\nPress Enter to continue...')
+                    elif len_choice == 5:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Mile-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.miles_func()            
+                        input('\nPress Enter to continue...')
+                    elif len_choice == 6:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Yard-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.yards_func()            
+                        input('\nPress Enter to continue...')
+                    elif len_choice == 7:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Foot-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.feet_func()            
+                        input('\nPress Enter to continue...')
+                    elif len_choice == 8:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Inch-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.inches_func()            
+                        input('\nPress Enter to continue...')
+                    elif len_choice == 9:
+                        clear_screen()
+                        sleep(1)
+                        break
+            elif uc_choice == 2:
+                while True:
+                    clear_screen()
+                    sleep(1)
+                                        
+                    weight = ' Weight '
+                    print(weight.center(40, '=').upper(), end='\n\n')
+                                            
+                    print(f"{Fore.RED}1{Style.RESET_ALL}. Kilogram")
+                    print(f"{Fore.RED}2{Style.RESET_ALL}. Gram")
+                    print(f"{Fore.RED}3{Style.RESET_ALL}. Milligram")
+                    print(f"{Fore.RED}4{Style.RESET_ALL}. Pound")
+                    print(f"{Fore.RED}5{Style.RESET_ALL}. Ounce")
+                    print(f"{Fore.RED}6{Style.RESET_ALL}. Back" , end='\n\n')
+                
+                                    
+                    try:
+                        we_choice = int(input('Choose : '))  
+                                                
+                    except ValueError:
+                        print('\nError: Please enter a number.')
+                        sleep(1)
+                        continue
+                                    
+                                    
+                    if we_choice == 1:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Kilogram-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.kilogram_func()            
+                        input('\nPress Enter to continue...')
+                                        
+                    elif we_choice == 2:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Gram-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.gram_func()
+                        input('\nPress Enter to continue...')
+                    elif we_choice == 3:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Milligram-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.milligram_func()            
+                        input('\nPress Enter to continue...')
+                    elif we_choice == 4:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Pound-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.pound_func()           
+                        input('\nPress Enter to continue...')
+                    elif we_choice == 5:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Ounce-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.ounce_func()            
+                        input('\nPress Enter to continue...')
+                    elif we_choice == 6:
+                        clear_screen()
+                        sleep(1)
+                        break
+            elif uc_choice == 3:
+                while True:
+                    clear_screen()
+                    sleep(1)
+                                                        
+                    temperature = ' Temperature '
+                    print(temperature.center(40, '=').upper(), end='\n\n')
+                                                            
+                    print(f"{Fore.RED}1{Style.RESET_ALL}. Celsius")
+                    print(f"{Fore.RED}2{Style.RESET_ALL}. Fahrenheit")
+                    print(f"{Fore.RED}3{Style.RESET_ALL}. Kelvin")
+                    print(f"{Fore.RED}4{Style.RESET_ALL}. Back")
+                                
+                                                    
+                    try:
+                        tem_choice = int(input('Choose : '))  
+                                                                
+                    except ValueError:
+                        print('\nError: Please enter a number.')
+                        sleep(1)
+                        continue
+                                                    
+                                                    
+                    if tem_choice == 1:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Celsius-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.celsius_func()            
+                        input('\nPress Enter to continue...')
+                                                        
+                    elif tem_choice == 2:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Fahrenheit-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.fahrenheit_func()
+                        input('\nPress Enter to continue...')
+                    elif tem_choice == 3:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Kelvin-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.kelvin_func()            
+                        input('\nPress Enter to continue...')
+                    elif tem_choice == 4:
+                        clear_screen()
+                        sleep(1)
+                        break
+            elif uc_choice == 4:
+                while True:
+                    clear_screen()
+                    sleep(1)
+                                                                        
+                    timee = ' Time '
+                    print(timee.center(40, '=').upper(), end='\n\n')
+                                                                            
+                    print(f"{Fore.RED}1{Style.RESET_ALL}. Second")
+                    print(f"{Fore.RED}2{Style.RESET_ALL}. Minute")
+                    print(f"{Fore.RED}3{Style.RESET_ALL}. Hour")
+                    print(f"{Fore.RED}4{Style.RESET_ALL}. Day")
+                    print(f"{Fore.RED}5{Style.RESET_ALL}. Back" , end='\n\n')
+                                                
+                                                                    
+                    try:
+                        time_choice = int(input('Choose : '))  
+                                                                                
+                    except ValueError:
+                            print('\nError: Please enter a number.')
+                            sleep(1)
+                            continue
+                                                                    
+                                                                    
+                    if time_choice == 1:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Second-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.seconds_func()            
+                        input('\nPress Enter to continue...')
+                                                                        
+                    elif time_choice == 2:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Minute-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.minutes_func()
+                        input('\nPress Enter to continue...')
+                    elif time_choice == 3:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Hour-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.hours_func()            
+                        input('\nPress Enter to continue...')
+                                        
+                    elif time_choice == 4:
+                        clear_screen()
+                        sleep(1)
+                        print(f"{Fore.CYAN}-Day-{Style.RESET_ALL}", end='\n\n')
+                        UnitConverter.days_func()            
+                        input('\nPress Enter to continue...')
+                    elif time_choice == 5:
+                        clear_screen()
+                        sleep(1)
+                        break
+            elif uc_choice == 5:
+                clear_screen()
+                sleep(1)
+                break
+    elif choice == 6:
         while True:
             clear_screen()
             sleep(1)
@@ -385,13 +654,13 @@ while True:
                 sleep(1)
                 break
 
-    elif choice == 6:
+    elif choice == 7:
         clear_screen()
         print('Exit ...')
         sleep(1)
         break
 
     else:
-        print('\nError: Please choose 1, 2, 3, 4, 5, or 6.')
+        print('\nError: Please choose 1, 2, 3, 4, 5, 6, or 7.')
         sleep(1)
         clear_screen()
