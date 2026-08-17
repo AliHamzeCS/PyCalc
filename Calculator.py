@@ -1,9 +1,21 @@
+import History
+import Settings
+
+
 def addition():
     try:
         first_number = int(input('Enter the first number : '))
         second_number = int(input('Enter the second number : '))
 
-        print(f'\nResult {first_number} + {second_number} = {first_number + second_number}')
+        result = first_number + second_number
+        formatted_result = Settings.format_result(result)
+
+        print(f'\nResult {first_number} + {second_number} = {formatted_result}')
+        
+        History.add_history(
+            f'{first_number} + {second_number}',
+            result
+        )
 
     except ValueError:
         print('\nError: Please enter numbers only.')
@@ -14,7 +26,15 @@ def subtraction():
         first_number = int(input('Enter the first number : '))
         second_number = int(input('Enter the second number : '))
 
-        print(f'\nResult {first_number} - {second_number} = {first_number - second_number}')
+        result = first_number - second_number
+        formatted_result = Settings.format_result(result)
+
+        print(f'\nResult {first_number} - {second_number} = {formatted_result}')
+                
+        History.add_history(
+            f'{first_number} - {second_number}',
+            result
+        )
 
     except ValueError:
         print('\nError: Please enter numbers only.')
@@ -25,7 +45,15 @@ def multiplication():
         first_number = int(input('Enter the first number : '))
         second_number = int(input('Enter the second number : '))
 
-        print(f'\nResult {first_number} × {second_number} = {first_number * second_number}')
+        result = first_number * second_number
+        formatted_result = Settings.format_result(result)
+
+        print(f'\nResult {first_number} × {second_number} = {formatted_result}')
+                        
+        History.add_history(
+            f'{first_number} × {second_number}',
+            result
+        )
 
     except ValueError:
         print('\nError: Please enter numbers only.')
@@ -36,7 +64,15 @@ def division():
         first_number = int(input('Enter the first number : '))
         second_number = int(input('Enter the second number : '))
 
-        print(f'\nResult {first_number} / {second_number} = {first_number / second_number}')
+        result = first_number / second_number
+        formatted_result = Settings.format_result(result)
+
+        print(f'\nResult {first_number} / {second_number} = {formatted_result}')
+                                
+        History.add_history(
+            f'{first_number} / {second_number}',
+            result
+        )
 
     except ValueError:
         print('\nError: Please enter numbers only.')
@@ -50,7 +86,15 @@ def power():
         first_number = int(input('Enter the first number : '))
         second_number = int(input('Enter the second number : '))
 
-        print(f'\nResult {first_number} ^ {second_number} = {first_number ** second_number}')
+        result = first_number ** second_number
+        formatted_result = Settings.format_result(result)
+
+        print(f'\nResult {first_number} ^ {second_number} = {formatted_result}')
+                                
+        History.add_history(
+            f'{first_number} ^ {second_number}',
+            result
+        )
 
     except ValueError:
         print('\nError: Please enter numbers only.')
@@ -61,7 +105,15 @@ def modulus():
         first_number = int(input('Enter the first number : '))
         second_number = int(input('Enter the second number : '))
 
-        print(f'\nResult {first_number} % {second_number} = {first_number % second_number}')
+        result = first_number % second_number
+        formatted_result = Settings.format_result(result)
+
+        print(f'\nResult {first_number} % {second_number} = {formatted_result}')
+                                
+        History.add_history(
+            f'{first_number} % {second_number}',
+            result
+        )
 
     except ValueError:
         print('\nError: Please enter numbers only.')

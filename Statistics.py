@@ -1,4 +1,6 @@
 import History
+import Settings
+
 
 def mean_func():
     while True:
@@ -17,17 +19,19 @@ def mean_func():
                     sum_of_numbers += float(num)
 
             mean = sum_of_numbers / (len(list_numbers) - list_numbers.count(''))
+            formatted_mean = Settings.format_result(mean)
 
             History.add_history(
                 f'Mean ',
                 mean
             )
 
-            print(f'\nMean = {mean}')
+            print(f'\nMean = {formatted_mean}')
             break
 
         except ValueError:
             print("Error: Please enter numbers only")
+
 
 def median_func():
     while True:
@@ -36,8 +40,9 @@ def median_func():
             list_numbers = numbers.split(' ')
 
             number_list = []
+
             for num in list_numbers:
-                if num!= '':
+                if num != '':
                     number_list.append(float(num))
 
             if len(number_list) == 0:
@@ -51,27 +56,32 @@ def median_func():
                 medium_index = n // 2
                 sum_number = number_list[medium_index - 1] + number_list[medium_index]
                 median_value = sum_number / 2
-                print(f'Median = {median_value}')
-                
+                formatted_median = Settings.format_result(median_value)
+
+                print(f'Median = {formatted_median}')
+
                 History.add_history(
-                                                f'Median ',
-                                                median_value
-                                            )
-                
-            else :
+                    f'Median ',
+                    median_value
+                )
+
+            else:
                 medium_index = n // 2
                 median_value = number_list[medium_index]
-                print(f'Median = {median_value}')
-                
+                formatted_median = Settings.format_result(median_value)
+
+                print(f'Median = {formatted_median}')
+
                 History.add_history(
-                                                                f'Median ',
-                                                                median_value
-                                                            )
-                
+                    f'Median ',
+                    median_value
+                )
+
             break
 
         except ValueError:
             print("Error: Please enter numbers only")
+
 
 def mode_func():
     while True:
@@ -79,14 +89,17 @@ def mode_func():
             numbers = input('Write the numbers and put a space between each number : ')
             list_numbers = numbers.split(' ')
 
-            dic_numbers ={}
-            for num in list_numbers :
-                if num!= '':
+            dic_numbers = {}
+
+            for num in list_numbers:
+                if num != '':
                     count = 0
                     test_number = float(num)
-                    for number in list_numbers :
-                        if number!= '' and float(number) == test_number :
+
+                    for number in list_numbers:
+                        if number != '' and float(number) == test_number:
                             count += 1
+
                     dic_numbers[test_number] = count
 
             if len(dic_numbers) == 0:
@@ -94,27 +107,38 @@ def mode_func():
                 continue
 
             max_count = 0
+
             for element in dic_numbers:
                 if dic_numbers[element] > max_count:
                     max_count = dic_numbers[element]
 
             modes = []
+
             for element in dic_numbers:
                 if dic_numbers[element] == max_count:
                     modes.append(element)
 
             if max_count == 1:
                 print("No Mode")
+
             else:
-                print(f'Mode = {modes}')
+                formatted_modes = []
+
+                for mode in modes:
+                    formatted_modes.append(Settings.format_result(mode))
+
+                print(f'Mode = {formatted_modes}')
+
                 History.add_history(
-                                                                f'Mode ',
-                                                                modes
-                                                            )
+                    f'Mode ',
+                    modes
+                )
+
             break
 
         except ValueError:
             print("Error: Please enter numbers only")
+
 
 def range_func():
     while True:
@@ -123,8 +147,9 @@ def range_func():
             list_numbers = numbers.split(' ')
 
             number_list = []
+
             for num in list_numbers:
-                if num!= '':
+                if num != '':
                     number_list.append(float(num))
 
             if len(number_list) == 0:
@@ -134,24 +159,28 @@ def range_func():
             max_number = number_list[0]
             min_number = number_list[0]
 
-            for num in number_list :
-                if num > max_number :
+            for num in number_list:
+                if num > max_number:
                     max_number = num
-                if num < min_number :
+
+                if num < min_number:
                     min_number = num
 
             range_val = max_number - min_number
-            print(f'Range = {range_val}')
-            
+            formatted_range = Settings.format_result(range_val)
+
+            print(f'Range = {formatted_range}')
+
             History.add_history(
-                                                                            f'Range ',
-                                                                            range_val
-                                                                        )
-            
+                f'Range ',
+                range_val
+            )
+
             break
 
         except ValueError:
             print("Error: Please enter numbers only")
+
 
 def variance():
     while True:
@@ -160,42 +189,50 @@ def variance():
             list_numbers = numbers.split(' ')
 
             number_list = []
+
             for num in list_numbers:
-                if num!= '':
+                if num != '':
                     number_list.append(float(num))
 
             if len(number_list) == 0:
                 print("Error: Please enter at least one number")
                 continue
 
-            #Calculate Mean
+            # Calculate Mean
             sum_of_numbers = 0
-            for num in number_list :
+
+            for num in number_list:
                 sum_of_numbers += num
+
             mean = sum_of_numbers / len(number_list)
 
-            #Calculate Variance
+            # Calculate Variance
             squared_differences = []
-            for num in number_list :
+
+            for num in number_list:
                 difference = num - mean
                 squared_differences.append(difference * difference)
 
             sum_total = 0
+
             for sq in squared_differences:
                 sum_total += sq
 
             variance_value = sum_total / len(squared_differences)
-            print(f'Variance = {variance_value}')
-            
+            formatted_variance = Settings.format_result(variance_value)
+
+            print(f'Variance = {formatted_variance}')
+
             History.add_history(
-                                                                                        f'Variance ',
-                                                                                        variance_value
-                                                                                    )
-            
+                f'Variance ',
+                variance_value
+            )
+
             break
 
         except ValueError:
             print("Error: Please enter numbers only")
+
 
 def standard_deviation():
     while True:
@@ -204,41 +241,48 @@ def standard_deviation():
             list_numbers = numbers.split(' ')
 
             number_list = []
+
             for num in list_numbers:
-                if num!= '':
+                if num != '':
                     number_list.append(float(num))
 
             if len(number_list) == 0:
                 print("Error: Please enter at least one number")
                 continue
 
-            #Calculate Mean
+            # Calculate Mean
             sum_of_numbers = 0
-            for num in number_list :
+
+            for num in number_list:
                 sum_of_numbers += num
+
             mean = sum_of_numbers / len(number_list)
 
-            #Calculate Variance
+            # Calculate Variance
             squared_differences = []
-            for num in number_list :
+
+            for num in number_list:
                 difference = num - mean
                 squared_differences.append(difference * difference)
 
             sum_total = 0
+
             for sq in squared_differences:
                 sum_total += sq
 
             variance_value = sum_total / len(squared_differences)
 
-            #Calculate standard deviation
+            # Calculate Standard Deviation
             standard_dev = variance_value ** 0.5
-            print(f'Standard Deviation = {standard_dev}')
-            
+            formatted_standard_dev = Settings.format_result(standard_dev)
+
+            print(f'Standard Deviation = {formatted_standard_dev}')
+
             History.add_history(
-                                                                                                    f'Standard Deviation ',
-                                                                                                    standard_dev
-                                                                                                )
-            
+                f'Standard Deviation ',
+                standard_dev
+            )
+
             break
 
         except ValueError:

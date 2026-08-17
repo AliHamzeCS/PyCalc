@@ -1,6 +1,8 @@
 from pint import UnitRegistry
 ureg = UnitRegistry()
+
 import History
+import Settings
 
 
 # ========== LENGTH ==========
@@ -15,7 +17,9 @@ def meters_func():
             val = num * ureg.meter
             result = val.to(ureg(to))
 
-            print(f'{num} meter = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} meter = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} meter',
@@ -36,7 +40,9 @@ def kilometers_func():
             val = num * ureg.kilometer
             result = val.to(ureg(to))
 
-            print(f'{num} kilometer = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} kilometer = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} kilometer',
@@ -57,7 +63,9 @@ def centimeters_func():
             val = num * ureg.centimeter
             result = val.to(ureg(to))
 
-            print(f'{num} centimeter = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} centimeter = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} centimeter',
@@ -78,7 +86,9 @@ def millimeters_func():
             val = num * ureg.millimeter
             result = val.to(ureg(to))
 
-            print(f'{num} millimeter = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} millimeter = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} millimeter',
@@ -99,7 +109,9 @@ def miles_func():
             val = num * ureg.mile
             result = val.to(ureg(to))
 
-            print(f'{num} mile = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} mile = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} mile',
@@ -120,7 +132,9 @@ def yards_func():
             val = num * ureg.yard
             result = val.to(ureg(to))
 
-            print(f'{num} yard = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} yard = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} yard',
@@ -141,7 +155,9 @@ def feet_func():
             val = num * ureg.foot
             result = val.to(ureg(to))
 
-            print(f'{num} foot = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} foot = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} foot',
@@ -162,7 +178,9 @@ def inches_func():
             val = num * ureg.inch
             result = val.to(ureg(to))
 
-            print(f'{num} inch = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} inch = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} inch',
@@ -185,7 +203,9 @@ def kilogram_func():
             val = num * ureg.kilogram
             result = val.to(ureg(to))
 
-            print(f'{num} kilogram = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} kilogram = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} kilogram',
@@ -206,7 +226,9 @@ def gram_func():
             val = num * ureg.gram
             result = val.to(ureg(to))
 
-            print(f'{num} gram = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} gram = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} gram',
@@ -227,7 +249,9 @@ def milligram_func():
             val = num * ureg.milligram
             result = val.to(ureg(to))
 
-            print(f'{num} milligram = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} milligram = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} milligram',
@@ -248,7 +272,9 @@ def pound_func():
             val = num * ureg.pound
             result = val.to(ureg(to))
 
-            print(f'{num} pound = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} pound = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} pound',
@@ -269,7 +295,9 @@ def ounce_func():
             val = num * ureg.ounce
             result = val.to(ureg(to))
 
-            print(f'{num} ounce = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} ounce = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} ounce',
@@ -292,7 +320,9 @@ def celsius_func():
         val = num * ureg.degC
         result = val.to(ureg(to))
 
-        print(f'{num} celsius = {result}')
+        formatted_result = Settings.format_result(result.magnitude)
+
+        print(f'{num} celsius = {formatted_result} {result.units}')
 
         History.add_history(
             f'{num} celsius',
@@ -313,7 +343,9 @@ def fahrenheit_func():
         val = num * ureg.degF
         result = val.to(ureg(to))
 
-        print(f'{num} fahrenheit = {result}')
+        formatted_result = Settings.format_result(result.magnitude)
+
+        print(f'{num} fahrenheit = {formatted_result} {result.units}')
 
         History.add_history(
             f'{num} fahrenheit',
@@ -334,7 +366,9 @@ def kelvin_func():
         val = num * ureg.kelvin
         result = val.to(ureg(to))
 
-        print(f'{num} kelvin = {result}')
+        formatted_result = Settings.format_result(result.magnitude)
+
+        print(f'{num} kelvin = {formatted_result} {result.units}')
 
         History.add_history(
             f'{num} kelvin',
@@ -357,7 +391,9 @@ def seconds_func():
             val = num * ureg.second
             result = val.to(ureg(to))
 
-            print(f'{num} second = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} second = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} second',
@@ -378,7 +414,9 @@ def minutes_func():
             val = num * ureg.minute
             result = val.to(ureg(to))
 
-            print(f'{num} minute = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} minute = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} minute',
@@ -399,7 +437,9 @@ def hours_func():
             val = num * ureg.hour
             result = val.to(ureg(to))
 
-            print(f'{num} hour = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} hour = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} hour',
@@ -420,7 +460,9 @@ def days_func():
             val = num * ureg.day
             result = val.to(ureg(to))
 
-            print(f'{num} day = {result}')
+            formatted_result = Settings.format_result(result.magnitude)
+
+            print(f'{num} day = {formatted_result} {result.units}')
 
             History.add_history(
                 f'{num} day',
@@ -429,4 +471,3 @@ def days_func():
 
     except:
         print('Error. Try again')
-        

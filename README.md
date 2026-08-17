@@ -1,150 +1,163 @@
-PyCalc v1.6.0
+# PyCalc v1.7.0
 
-Advanced Math Toolkit
+## Advanced Math Toolkit
 
-PyCalc is a modular Python command-line math toolkit that provides mathematical operations and utilities through a simple menu-based interface.
+PyCalc is a modular Python command-line math toolkit that provides
+mathematical operations and utilities through a simple menu-based interface.
 
-Version
+## Version
 
-v1.6.0
+v1.7.0
 
-Features
+## Features
 
-Calculator
+### 1. Basic Calculator
 
-Addition
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Power
+- Modulus
 
-Subtraction
+### 2. Scientific Calculator
 
-Multiplication
+- Square Root
+- Cube Root
+- Sine
+- Cosine
+- Tangent
+- Logarithm
+- Factorial
+- Arcsine
+- Arccosine
+- Arctangent
 
-Division
+### 3. Quadratic Equations
 
-Power
+- Solve one quadratic equation
+- Solve systems of two equations
+- Solve systems of three equations
+- Discriminant and root analysis
+- Real and complex roots
 
-Modulus
+### 4. Geometry
 
-Quadratic Equations
+- Circle
+- Rectangle
+- Square
+- Triangle
+- Cube
+- Sphere
+- Cylinder
 
-One Quadratic Equation
+### 5. Statistics
 
-System of Two Equations
+- Mean
+- Median
+- Mode
+- Range
+- Variance
+- Standard Deviation
 
-System of Three Equations
+### 6. Unit Converter
 
-Discriminant & Root Analysis
+#### Length
+- Meter
+- Kilometer
+- Centimeter
+- Millimeter
+- Mile
+- Yard
+- Foot
+- Inch
 
-Geometry
+#### Weight
+- Kilogram
+- Gram
+- Milligram
+- Pound
+- Ounce
 
-Circle
+#### Temperature
+- Celsius
+- Fahrenheit
+- Kelvin
 
-Rectangle
+#### Time
+- Second
+- Minute
+- Hour
+- Day
 
-Square
+### 7. Calculation History
 
-Triangle
+- Save calculations
+- View calculation history
+- Clear calculation history
+- JSON-based history storage
 
-Cube
+### 8. Settings
 
-Sphere
+- Set decimal precision
+- Set calculation delay
+- Reset settings to default
+- JSON-based settings storage
 
-Cylinder
+## v1.7.0 Changes
 
-Scientific Calculator
+### Settings System
 
-Square Root
+Added a settings system that allows users to customize PyCalc.
 
-Cube Root
+### Decimal Precision
 
-Logarithm
+Users can choose the number of decimal places displayed in calculation results.
 
-Factorial
+Supported precision:
 
-Sin, Cos, Tan
+- 0 to 10 decimal places
 
-Arcsin, Arccos, Arctan
+### Calculation Delay
 
-Unit Converter
+Users can customize the delay used by PyCalc.
 
-Length
+### Reset Settings
 
-Weight
+Users can restore the default settings:
 
-Temperature
+- Decimal precision: 2
+- Calculation delay: 1 second
 
-Time
+### Settings Storage
 
-Statistics
+Settings are stored in:
 
-Mean
+`settings.json`
 
-Median
+## Technologies
 
-Mode
+- Python
+- JSON
+- Colorama
+- Pint
 
-Range
+## Project Structure
 
-Variance
-
-Standard Deviation
-
-Calculation History
-
-View calculation history
-
-Clear calculation history
-
-Store results in history.json
-
-Technologies
-
-Python
-
-Colorama
-
-Pint
-
-JSON
-
-Python math module
-
-Installation
-
-git clone <YOUR-REPOSITORY-URL>
-cd PyCalc
-python -m pip install colorama pint
-
-Run
-
-python main.py
-
-Project Structure
-
+```text
 PyCalc/
-├── main.py
+│
 ├── Calculator.py
+├── ScientificCalculator.py
 ├── QuadraticEquations.py
 ├── Geometry.py
-├── ScientificCalculator.py
-├── UnitConverter.py
 ├── Statistics.py
+├── UnitConverter.py
 ├── History.py
+├── Settings.py
+├── main.py
+│
 ├── history.json
-├── README.md
-└── .gitignore
-
-Version 1.6.0
-
-This release adds the Statistics module to PyCalc.
-
-The Statistics module provides Mean, Median, Mode, Range, Variance, and Standard Deviation. Statistics results are integrated with the existing calculation history system.
-
-Author
-
-Ali Hamze
-
-GitHub: AliHamzeCS
-
-License
-
-This project is for learning and development purposes.
+├── settings.json
+├── .gitignore
+└── README.md

@@ -3,6 +3,7 @@ init()
 
 import math
 import History
+import Settings
 
 
 # Get a valid number from the user
@@ -31,15 +32,19 @@ def solve_quadratic_equation():
     c = get_number("c: ")
 
     D = b * b - 4 * a * c
+    formatted_D = Settings.format_result(D)
 
     print(f"\nEquation: {a}x² + {b}x + {c} = 0")
-    print(f"Discriminant (D) = {D}")
+    print(f"Discriminant (D) = {formatted_D}")
 
     if D > 0:
         x1 = (-b - math.sqrt(D)) / (2 * a)
         x2 = (-b + math.sqrt(D)) / (2 * a)
 
-        print(f"Two real roots: x1 = {x1}, x2 = {x2}")
+        formatted_x1 = Settings.format_result(x1)
+        formatted_x2 = Settings.format_result(x2)
+
+        print(f"Two real roots: x1 = {formatted_x1}, x2 = {formatted_x2}")
 
         History.add_history(
             f"{a}x² + {b}x + {c} = 0",
@@ -49,7 +54,9 @@ def solve_quadratic_equation():
     elif D == 0:
         x1 = -b / (2 * a)
 
-        print(f"One real root: x1 = {x1}")
+        formatted_x1 = Settings.format_result(x1)
+
+        print(f"One real root: x1 = {formatted_x1}")
 
         History.add_history(
             f"{a}x² + {b}x + {c} = 0",
@@ -60,10 +67,13 @@ def solve_quadratic_equation():
         real_part = -b / (2 * a)
         imag_part = math.sqrt(-D) / (2 * a)
 
+        formatted_real_part = Settings.format_result(real_part)
+        formatted_imag_part = Settings.format_result(imag_part)
+
         print(
             f"Two complex roots: "
-            f"{real_part} + {imag_part}i , "
-            f"{real_part} - {imag_part}i"
+            f"{formatted_real_part} + {formatted_imag_part}i , "
+            f"{formatted_real_part} - {formatted_imag_part}i"
         )
 
         History.add_history(
@@ -98,7 +108,10 @@ def solve_system_two_equations():
         x = Dx / D
         y = Dy / D
 
-        print(f"Unique solution: x = {x}, y = {y}")
+        formatted_x = Settings.format_result(x)
+        formatted_y = Settings.format_result(y)
+
+        print(f"Unique solution: x = {formatted_x}, y = {formatted_y}")
 
         History.add_history(
             f"{a1}x + {b1}y = {c1} | "
@@ -181,7 +194,16 @@ def solve_system_three_equations():
         y = Dy / D
         z = Dz / D
 
-        print(f"Unique solution: x = {x}, y = {y}, z = {z}")
+        formatted_x = Settings.format_result(x)
+        formatted_y = Settings.format_result(y)
+        formatted_z = Settings.format_result(z)
+
+        print(
+            f"Unique solution: "
+            f"x = {formatted_x}, "
+            f"y = {formatted_y}, "
+            f"z = {formatted_z}"
+        )
 
         History.add_history(
             f"{a1}x + {b1}y + {c1}z = {d1} | "
@@ -229,8 +251,9 @@ def discriminant_analysis():
     c = get_number("c: ")
 
     D = b * b - 4 * a * c
+    formatted_D = Settings.format_result(D)
 
-    print(f"\nDiscriminant (D) = {D}")
+    print(f"\nDiscriminant (D) = {formatted_D}")
 
     if D > 0:
         print("The equation has two distinct real roots.")
