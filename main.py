@@ -9,6 +9,7 @@ import History
 import Geometry
 import ScientificCalculator
 import UnitConverter
+import Statistics
 
 def sleep(seconds):
     time.sleep(seconds)
@@ -32,8 +33,9 @@ while True:
     print(f"{Fore.RED}3{Style.RESET_ALL}. Geometry")
     print(f"{Fore.RED}4{Style.RESET_ALL}. Scientific Calculator")
     print(f"{Fore.RED}5{Style.RESET_ALL}. Unit Converter")
-    print(f"{Fore.RED}6{Style.RESET_ALL}. History")
-    print(f"{Fore.RED}7{Style.RESET_ALL}. Exit", end='\n\n')  
+    print(f"{Fore.RED}6{Style.RESET_ALL}. Statistics")
+    print(f"{Fore.RED}7{Style.RESET_ALL}. History")
+    print(f"{Fore.RED}8{Style.RESET_ALL}. Exit", end='\n\n')  
 
     try:
         choice = int(input('Choose : '))
@@ -610,7 +612,72 @@ while True:
                 clear_screen()
                 sleep(1)
                 break
+            
     elif choice == 6:
+        while True:
+            clear_screen()
+            sleep(1)
+                
+            statistics = ' Statistics '
+            print(statistics.center(40, '=').upper(), end='\n\n')
+                    
+            print(f"{Fore.RED}1{Style.RESET_ALL}. Mean")
+            print(f"{Fore.RED}2{Style.RESET_ALL}. Median")
+            print(f"{Fore.RED}3{Style.RESET_ALL}. Mode")
+            print(f"{Fore.RED}4{Style.RESET_ALL}. Range")
+            print(f"{Fore.RED}5{Style.RESET_ALL}. Variance")
+            print(f"{Fore.RED}6{Style.RESET_ALL}. Standard Deviation")
+            print(f"{Fore.RED}7{Style.RESET_ALL}. Back")
+                    
+            try:
+                stat_choice = int(input('Choose : '))  
+                    
+            except ValueError:
+                print('\nError: Please enter a number.')
+                sleep(1)
+                continue
+            
+            if stat_choice == 1:
+                clear_screen()
+                sleep(1)
+                print(f"{Fore.CYAN}-Mean-{Style.RESET_ALL}", end='\n\n')
+                Statistics.mean_func()           
+                input('\nPress Enter to continue...')
+            elif stat_choice == 2:
+                clear_screen()
+                sleep(1)
+                print(f"{Fore.CYAN}-Median-{Style.RESET_ALL}", end='\n\n')
+                Statistics.median_func()           
+                input('\nPress Enter to continue...')
+            elif stat_choice == 3:   
+                clear_screen()
+                sleep(1)
+                print(f"{Fore.CYAN}-Mode-{Style.RESET_ALL}", end='\n\n')
+                Statistics.mode_func()            
+                input('\nPress Enter to continue...')
+            elif stat_choice == 4: 
+                clear_screen()
+                sleep(1)
+                print(f"{Fore.CYAN}-Range-{Style.RESET_ALL}", end='\n\n')
+                Statistics.range_func()            
+                input('\nPress Enter to continue...')
+            elif stat_choice == 5: 
+                clear_screen()
+                sleep(1)
+                print(f"{Fore.CYAN}-Variance-{Style.RESET_ALL}", end='\n\n')
+                Statistics.variance()            
+                input('\nPress Enter to continue...')
+            elif stat_choice == 6: 
+                clear_screen()
+                sleep(1)
+                print(f"{Fore.CYAN}-Standard Deviation-{Style.RESET_ALL}", end='\n\n')
+                Statistics.standard_deviation()            
+                input('\nPress Enter to continue...')
+            elif stat_choice == 7: 
+                clear_screen()
+                sleep(1)
+                break  
+    elif choice == 7:
         while True:
             clear_screen()
             sleep(1)
@@ -654,13 +721,13 @@ while True:
                 sleep(1)
                 break
 
-    elif choice == 7:
+    elif choice == 8:
         clear_screen()
         print('Exit ...')
         sleep(1)
         break
 
     else:
-        print('\nError: Please choose 1, 2, 3, 4, 5, 6, or 7.')
+        print('\nError: Please choose 1, 2, 3, 4, 5, 6, 7, or 8.')
         sleep(1)
         clear_screen()

@@ -1,4 +1,4 @@
-PyCalc v1.5.0
+PyCalc v1.6.0
 
 Advanced Math Toolkit
 
@@ -6,11 +6,11 @@ PyCalc is a modular Python command-line math toolkit that provides mathematical 
 
 Version
 
-v1.5.0
+v1.6.0
 
 Features
 
-1. Calculator
+Calculator
 
 Addition
 
@@ -24,7 +24,7 @@ Power
 
 Modulus
 
-2. Quadratic Equations
+Quadratic Equations
 
 One Quadratic Equation
 
@@ -34,7 +34,7 @@ System of Three Equations
 
 Discriminant & Root Analysis
 
-3. Geometry
+Geometry
 
 Circle
 
@@ -50,7 +50,7 @@ Sphere
 
 Cylinder
 
-4. Scientific Calculator
+Scientific Calculator
 
 Square Root
 
@@ -60,45 +60,40 @@ Logarithm
 
 Factorial
 
-Sin
+Sin, Cos, Tan
 
-Cos
+Arcsin, Arccos, Arctan
 
-Tan
+Unit Converter
 
-Arcsin
+Length
 
-Arccos
+Weight
 
-Arctan
+Temperature
 
-<<<<<<< HEAD
-5. History
-=======
-5. Unit Converter
+Time
 
-Length: Meter, Kilometer, Centimeter, Millimeter, Mile, Yard, Foot, Inch
+Statistics
 
-Weight: Kilogram, Gram, Milligram, Pound, Ounce
+Mean
 
-Temperature: Celsius, Fahrenheit, Kelvin
+Median
 
-Time: Second, Minute, Hour, Day
+Mode
 
-6. Calculation History
->>>>>>> 06f431c (feat: add unit converter v1.5.0)
+Range
+
+Variance
+
+Standard Deviation
+
+Calculation History
 
 View calculation history
 
 Clear calculation history
 
-<<<<<<< HEAD
-History is stored in history.json
-
-6. Exit
-
-Close PyCalc safely from the main menu.
-=======
 Store results in history.json
 
 Technologies
@@ -115,19 +110,13 @@ Python math module
 
 Installation
 
-Clone the repository:
-
 git clone <YOUR-REPOSITORY-URL>
 cd PyCalc
-
-Install the required packages:
-
 python -m pip install colorama pint
 
 Run
 
 python main.py
->>>>>>> 06f431c (feat: add unit converter v1.5.0)
 
 Project Structure
 
@@ -137,66 +126,18 @@ PyCalc/
 ├── QuadraticEquations.py
 ├── Geometry.py
 ├── ScientificCalculator.py
-<<<<<<< HEAD
-├── History.py
-├── history.json
-└── README.md
-
-Technologies
-
-Python
-
-JSON
-
-Colorama
-
-Python math module
-
-Installation
-
-Clone the repository:
-
-git clone <YOUR-REPOSITORY-URL>
-cd PyCalc
-
-Install the required dependency:
-
-pip install colorama
-
-Run
-
-Start PyCalc with:
-
-python3 main.py
-
-Version 1.4.0
-
-This release includes the Scientific Calculator module and integrates it
-into the main PyCalc menu.
-
-The project is structured into separate Python modules so that each
-feature can be developed and maintained independently.
-
-Author
-
-Ali Hamze
-
-GitHub: AliHamze
-
-License
-
-=======
 ├── UnitConverter.py
+├── Statistics.py
 ├── History.py
 ├── history.json
 ├── README.md
 └── .gitignore
 
-Version 1.5.0
+Version 1.6.0
 
-This release adds the Unit Converter to PyCalc.
+This release adds the Statistics module to PyCalc.
 
-The Unit Converter supports length, weight, temperature, and time conversions using the Pint library. Conversion results are also integrated with the existing calculation history system.
+The Statistics module provides Mean, Median, Mode, Range, Variance, and Standard Deviation. Statistics results are integrated with the existing calculation history system.
 
 Author
 
@@ -206,5 +147,4 @@ GitHub: AliHamzeCS
 
 License
 
->>>>>>> 06f431c (feat: add unit converter v1.5.0)
 This project is for learning and development purposes.
